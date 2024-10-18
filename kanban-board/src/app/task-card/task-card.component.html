@@ -1,0 +1,18 @@
+<div class="task-card" [style.border-top-color]="statusColour">
+  <div class="icons">
+    <mat-icon class="icon-primary" (click)="onEditTaskClick()">edit</mat-icon>
+    <mat-icon class="icon-warn">delete</mat-icon>
+    <mat-icon class="icon-primary" (click)="toggleAssigneeDropdown($event)">person</mat-icon>
+  </div>
+  <div class="card-header">
+    <h2 class="card-title">{{ task.taskTitle }}</h2>
+  </div>
+  <div class="card-content">
+    <p>{{ task.taskDescription }}</p>
+  </div>
+  <div class="card-actions">
+    <span> Status : {{ statusTitle }}</span>
+    <div class="priority" [style.color]="getPriorityColor()"><mat-icon>flag</mat-icon></div>
+  </div>
+  
+</div>
